@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="login.css">
+    <Script> 
+
+        // alert("Welcome to login Page!");
+    </Script>
+</head>
+
+<body>
+    <div class="Container">
+        <div id="loginpage">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="username" required>
+            <label for="input">Password:</label>
+            <input type="password" id="input" required placeholder="password" required>
+            <!-- <button id="button" onclick="toggle()">Click here</button> -->
+            <button id="login" onclick="vaild()">Login</button>
+            <!-- <button id="show" onclick="toggle()">Show Password</button> -->
+        </div>
+
+    </div>
+</body>
+<script>
+    let login = document.querySelector("#login");
+    login.addEventListener("click", function () {
+        let username = document.querySelector("#username").value;
+        let password = document.querySelector("#password").value;
+        if (username === "Admin" && password === "admin123") {
+            alert(login.innerText = "Login successfull");
+        }
+        else {
+            alert("Invalid username or password");
+
+        }
+    })
+    function toggle() {
+        let input = document.querySelector("#input");
+        if (input.type === "text") {
+            input.type = "password";
+        }
+        else {
+            input.type = "text";
+        }
+    }
+    function vaild() {
+        alert("Login succesfull");
+    }
+</script>
+
+</html>

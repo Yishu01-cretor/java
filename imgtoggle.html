@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+</head>
+<body>
+    
+    <img src="./off.png"   id="img" style="width: 500px; height: 500px;">
+    <button id="button" onclick="toggle()"> Turn on</button>
+</body>
+<script>
+    let isOn=false;
+    function toggle(){
+        let img = document.querySelector("#img");
+        let button = document.querySelector("#button");
+        if(isOn){
+            img.src="./on.png";
+            button.innerText="Turn on";
+            isOn=false;
+        }
+        else{
+            img.src="./off.png";
+            button.innerText="Turn off";
+            isOn=true;
+        }
+    }
+</script>
+</html>

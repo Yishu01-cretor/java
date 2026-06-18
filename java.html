@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript</title>
+</head>
+
+<body>
+  <form>
+    <label  fror="name">NAME</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+    <button onclick="alert('Welcome here')">Click me</button>
+  </form>
+</body>
+<!-- <script src="java.js"> -->
+<Script >
+  localStorage.setItem("username","Yishu");
+  localStorage.setItem("age",25);
+
+  let value = localStorage.getItem("age");
+  console.log(value);
+
+  localStorage.removeItem("age");
+  localStorage.clear();
+</script>
+
+</html>
