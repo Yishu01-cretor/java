@@ -1,54 +1,80 @@
 /* Center the box on the page */
-.Container {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3b3838;
-    font-family: Arial, sans-serif;
+.container {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3838;
+  font-family: Arial, sans-serif;
 }
 
 /* Login box styling */
-#loginpage{
-    display: flex;
-    flex-direction:column;
-    /* align-items:center; */
-    color:#4e4a4a;
-    background-color: (3, 25, 23, 0.8);
-    padding: 40px;
-    margin:20px;
-    height: 300px;
-    align-items: center;
-    justify-content: center;
-    max-width: 400px;
-    border-radius: 8px;     
-    box-shadow: 0 8px 8px  4px rgba(163, 165, 144, 0.6);
+.loginpage {
+  display: flex;
+  flex-direction: column;
+  /* align-items:center; */
+  color: #4e4a4a;
+  background-color: (3, 25, 23, 0.8);
+  padding: 30px;
+  width: 100%;
+  margin: 10px;
+  height: 500px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 5px solid #5a5555;
+  box-shadow: 0 8px 8px 4px rgba(118, 124, 65, 0.6);
+}
+.loginpagee{
+  display:flex;
+  align-items: center;
+  
+}
+.loginpage,
+input {
+  border-radius: 8px;
+
+  color: black;
+}
+.loginpage,
+input:hover {
+  color: white;
+  background-color: Black;
+  border: 2px solid rgb(30, 27, 27);
+}
+
+#label {
+  color: #ffff;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  /* align-item:left; */
+}
+
+
+#login {
+  margin: 10px;
+  display: flex;
+  border-radius: 8px;
+  /* width: 60px; */
+  /* height: 30px; */
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  color:black;
+  border-radius:5px;
+  margin-top:10px;
+  /* align-item: Center;   */
+  align-items: flex-end;
+  justify-content :center;
 
 }
 
-.loginpage ,label{
-    color:#ffff;
-    margin:10px;
-    padding:10px;
-    display:flex;
-    align-items:left ;
-    justify-content:left;
-    /* align-item:left; */
+#login:hover {
+  background-color: black;
+  color: rgb(146, 146, 148);
 }
 
-.loginpage ,button{
-    margin :10px;
-    display :flex;
-    border-radius :8px;
-    width:60pxpx;
-    height:30px;
-    background-color:red;
-    font-size:20px;
-}
-
-.loginpage,button:hover{
-    background-color:black;
-    /* text:#ffff; */ color:blue;
-
-}

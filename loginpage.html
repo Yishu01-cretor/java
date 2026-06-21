@@ -6,35 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link rel="stylesheet" href="login.css">
-    <Script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <Script>
 
         // alert("Welcome to login Page!");
     </Script>
 </head>
 
 <body>
-    <div class="Container">
-        <div id="loginpage">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="username" required>
-            <label for="input">Password:</label>
-            <input type="password" id="input" required placeholder="password" required>
-            <!-- <button id="button" onclick="toggle()">Click here</button> -->
-            <button id="login" onclick="vaild()">Login</button>
-            <!-- <button id="show" onclick="toggle()">Show Password</button> -->
-        </div>
+    <form>
+        <div class="container">
+            <div class="Row">
 
-    </div>
+                <div class="loginpage" class="col-sm-12">
+                    <div class="">
+                        <h1>Login Page</h1>
+                    </div>
+                    <div class="loginpagee">
+                        <label for="username" class="cols-sm-6" id="label">Username:</label>
+                        <input type="text" id="username" placeholder="username" required size="50vh" class="col-sm-10">
+                    </div>
+                    <div class="loginpagee">
+                        <label for="input" id="label">Password:</label>
+                        <input type="password" id="password" required placeholder="password" required size="50vh"
+                            class="col-sm-10">
+                    </div>
+                    <!-- <button id="button" onclick="toggle()">Click here</button> -->
+                    <button id="login" type="submit" onclick="vaild()" class="col-sm-4">Login</button>
+                    <!-- <button id="show" onclick="toggle()">Show Password</button> -->
+                </div>
+            </div>
+        </div>
+    </form>
+
 </body>
 <script>
     let login = document.querySelector("#login");
     login.addEventListener("click", function () {
         let username = document.querySelector("#username").value;
         let password = document.querySelector("#password").value;
-        if (username === "Admin" && password === "admin123") {
+        if (username === "Admin" && password === "0000") {
             alert(login.innerText = "Login successfull");
         }
         else {
+
             alert("Invalid username or password");
 
         }
@@ -47,9 +63,16 @@
         else {
             input.type = "text";
         }
-    }
-    function vaild() {
-        alert("Login succesfull");
+        // }
+        // function vaild() {
+        //     let username = document.getElementById("#username").value;
+        //     let password = document.getElementById("#input").value;
+
+        //     if (username !== "" && password!=="") {
+        //         alert("Login successful");
+        //     } else {
+        //         alert("Try again!");
+        //     }
     }
 </script>
 

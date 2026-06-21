@@ -11,12 +11,12 @@
 
     <label>
         Enter your task:
-        <input type="text" placeholder="Enter your task" id="task-input">
+        <input type="text" placeholder="Enter your task" id="task-input" required>
     </label>
 
     <label>
         End date:
-        <input type="date" id="date-input">
+        <input type="date" id="date-input" required>
     </label>
 
     <button id="btn" onclick="addTask()">Add</button>
@@ -37,7 +37,10 @@
                 alert("Please enter a task");
                 return;
             }
-
+            // if(!task || !date){
+            //     alert("Please fill the task name and  date");
+            //     return;
+            // }
             todos.push({
                 taskname: task,
                 taskdate: date
@@ -56,13 +59,19 @@
 
             for (let i = 0; i < todos.length; i++) {
                 result += `
-                    <div>
+                    <span>
                         ${todos[i].taskname} - ${todos[i].taskdate}
-                    </div>
+                        <button onClick="deleteTask(${i});">Delete</button>
+                    </span><br>
                 `;
             }
 
             document.querySelector("#list").innerHTML = result;
+        }
+        function deleteTask(index) {
+            todos.splice(index, 1);
+            localStorage.setItem("todos", JSON.stringify(todos));
+            display();
         }
     </script>
 
